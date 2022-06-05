@@ -1,6 +1,6 @@
-#jotaalvim-tool
+# jotaalvim-tool
 
-#dpl - Delete duplicated lines
+# dpl - Delete duplicated lines
 Delete repeated lines in file, ignores empty lines. Similar to
 ```
 sort | uniq
