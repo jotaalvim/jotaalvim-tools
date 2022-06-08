@@ -1,7 +1,7 @@
 # jotaalvim-tool
 
-##ddl - Delete duplicated lines
-Delete repeated lines in file, ignores empty lines and lines who have ``` `{ }``` in them. Similar to
+## ddl - Delete duplicated lines
+Delete repeated lines in file, ignores empty lines and "empty" lines who have ``` `{ }``` in them. Similar to
 ```
 sort | uniq
 ```
