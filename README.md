@@ -1,4 +1,4 @@
-#jotaalvim-tool
+# jotaalvim-tool
 
 ##ddl - Delete duplicated lines
 Delete repeated lines in file, ignores empty lines and lines who have ``` `{ }``` in them. Similar to
