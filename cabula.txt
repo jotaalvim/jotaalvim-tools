@@ -1,0 +1,231 @@
+== BASH == 
+<CTR - R > procura na história
+    biblioteca readLine
+    pode-se usar nos intrepertadores ( usam essa bibioteca )
+<CTR - SHT - F > procura no ecra
+
+editar bash 
+    • ~/.bashrc
+
+para atualizar 
+    • source ~/.bashrc 
+
+
+uniq - report or omit repeated lines
+
+
+pushd  
+    • garda uma dir
+
+popd   
+    • volta a dir
+
+sort
+    • ordena
+    • -n → ordena numéricamente  
+
+uniq -c 
+    • conta linhas adjacentes iguais
+    • podes dar jeito isar com o sort
+
+nl 
+    • numera linhas
+
+locate 
+    • procura um ficheiro
+    • atualiza diariamente
+
+find
+    • dá todos os ficheiros de uma dir recursivamente
+
+grep 
+    • -r → recursivo
+    • -w palavras inteiras
+    • -i → ignore case, maiúsculas e minúsculas
+
+yes
+    •  imprime uma string para forçar paragem 
+
+tr
+    • subtituir carateres por determinado caratere
+    • tr a-z b-za → roda uma letra para a frente estilo cifra de cesar
+
+seq
+    • faz uma sequencia 
+
+shuf 
+    • trocas linhas de siteo
+
+tac 
+    • concatena em reverse
+    seq 10 | tac = 10 9 8 7 6 5 4 3 2 1 
+
+pi 
+    • calcaula x elementos do pi
+
+factor
+    • fatoriza um numero
+
+pv
+    • mostra as coisas como se estivesse a escrever em tempo real
+    pv -qL 10
+
+rig
+    • gera automáticamente uma identidade, morada
+
+cal
+    • calendário
+
+date
+    • data 
+
+<  redirecionamento input
+>  redirecionamento ouput
+>> redirecionamento append
+2> redirecionamento erros
+
+lolcat
+    • aplica um efeito de arcoiris a cores
+
+    fortune | cowsay | lolcat -a
+    cores a piscar 
+    • lolcat -a -d 500
+
+
+cowsay
+    • faz uma vaca a dizer uma string
+
+toilet
+    • faz letras com carateres
+    toilet -f mono12 -F metal abcd
+
+pandoc
+    • conversor entre formatos
+    pandoc ficheiro_entrada.extensao -t beamer -o output.extensao
+
+figlet
+    • faz letras com carateres
+    font future.tlf
+
+escreve letras coloridas
+    while true; do echo "$(date '+%D %T' | toilet -f term -F border --gay)"; sleep 1; done
+
+aafire
+    • desenha fogo
+
+oneko
+    • poe um gatinho atraz do cursos
+
+
+hostname -I
+    ip
+
+links simbolicos
+ln -s /home/jotaalvim/Documents/projetos/jotaalvim-tools/ddl ~/.local/bin/ddl
+
+
+asdf local ruby 2.7.5
+asdf global ruby 3.1.0
+
+FIXME
+feh  da para ver diretoria ,imagens
+
+pdftotext
+    -layout
+
+pdfimages -png
+
+pdftohtml
+
+
+
+
+
+VIM
+
+editar vim 
+    • ~/.vimrc
+
+K -> manual 
+
+:      entrar no modo comando de linha
+:%     para todas as linhas
+:20,50 entre as linhas 20 e 50
+:20,$  entre as linhas 20 e fim
+:20,.  entre as linhas 20 e linha atual
+
+Nas substituições
+    & → aquilo que fez matching na expressão regular
+    . → 1 carater != de \n 
+    * → 0 ou mais occorencias do que está a esquerda
+    + → 1 ou mais occorencias do que está a esquerda
+    [a-zA-Z0-9] → conjunto de alfanumerico
+    \w → conjunto     alfanumerico
+    \W → conjunto NAO alfanumerico
+    \d → digito
+    \D → NAO digito
+    ^ → inicio da linha
+    $ → fim da linha
+    ^ → [^abc] não a,b ou c
+    {2} → repetiçao do padrao 2 vezes
+    {1,5} → repetiçao do padrao 1 vezes até 5 vezes
+    \s → whitespace
+    \S → NAO whitespace
+
+C-P em modo insert - completa palavras
+<C-X> <C-Y>
+<C-E>move camera
+<C-Y> move camera
+
+Contas o número de vezes que uma palavra ocorre
+    :%s/palavra//gn   
+    n -> diz para não fazer a substituiçao
+
+:%s/.*/<a>&<\/a>/
+:%norm i<a>
+:%norm A</a>
+
+=== github ===
+
+criar branch:
+git checkout -b <nome-branch>
+trocar de branch
+(-c create)
+    git switch -c <nome-branch>
+
+ver branchs:
+    git branch
+    git status também da
+
+da primeira vez a ver dar push
+    git push -u origin <nome-branch>
+
+depois pedir um pull request pelo github
+
+faz download de cenas que nao tenho
+    git fetch
+        --prune
+
+    git pull → git fetch + merge
+
+esconde os ficheiros que se fez alterações, para poder viajar para o ramos dos outros
+    git stash
+
+reverte a operação
+    git stash pop
+
+reverter alraçõs feitas para como tava antes do add, é recursivo
+    git restore .
+
+reverte para como estiver no repositorio CUIDADE PERDE-SE COISAS
+    git reset .
+        --soft
+        --hard
+
+lista de commits
+    git log
+
+
+
+emoj 
+    da um emoji com base em palavras
