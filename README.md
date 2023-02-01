@@ -1,4 +1,4 @@
-### jotaalvim-tool
+# jotaalvim-tool
 a collection of small and simple scrips made by me
 
 ## ddl - Delete duplicated lines
