@@ -3,7 +3,6 @@
 import "cryptonite" Crypto.Hash
 import qualified Data.ByteString as B
 import Data.List
-
 import System.Directory
 
 --import Cp
@@ -25,6 +24,8 @@ mrf fp = do
 --mrf = md5 <$> B.readFile
 --c <- md5 <$> B.readFile "Cp.hs" -- :: IO (Digest MD5)
 
-cifra = (mapM mrf =<<) . listDirectory
+semiMap l = [ mrf k |  k <- l ]
 
---main2 = (repetidos =<<) . cifra
+cifra = fmap semiMap . listDirectory
+-- cifra = (repetidos =<<) . fmap semiMap . listDirectory
+
