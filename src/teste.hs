@@ -24,6 +24,8 @@ mrf fp = do
 --mrf = md5 <$> B.readFile
 --c <- md5 <$> B.readFile "Cp.hs" -- :: IO (Digest MD5)
 
+
+
 semiMap l = [ mrf k |  k <- l ]
 
 cifra = fmap semiMap . listDirectory
