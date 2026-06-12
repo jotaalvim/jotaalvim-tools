@@ -2,3 +2,4 @@
 
 pushb/*
 !pushb/pushb.hs
+!pushb/popb.hs

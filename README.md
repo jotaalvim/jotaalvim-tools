@@ -4,9 +4,11 @@ This is collection of homemade scrips made to experiment with different techniqu
 
 add symbolic link by force
 
-`ln -sf "$PWD/pushb" ~/.local/bin/pushb`
+```
+ln -sf "$PWD/pushb" ~/.local/bin/pushb
+ln -sf "$PWD/popb" ~/.local/bin/popb
 
-`hash -r`
+```
 
 ## pushb popb
 
