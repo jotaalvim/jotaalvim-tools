@@ -19,14 +19,15 @@ import System.Process
 
 -- readProcess :: FilePath -> [String] -> String -> IO String
 
+strip = takeWhile (/= '\n')
+
 getBranchName    = readProcess "git" ["rev-parse", "--abbrev-ref", "HEAD"] []
 gitSwitch branch = readProcess "git" ["switch", branch] []
 gitStashPush     = readProcess "git" ["stash" , "push"] [] 
 
 
-
 main = do
-    branchToSwitch <- head <$> getArgs
+    branchToSwitch <- strip <$> head <$> getArgs
 
     if branchToSwitch == "." 
     then do
